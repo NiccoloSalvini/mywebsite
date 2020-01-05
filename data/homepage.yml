@@ -1,0 +1,173 @@
+# banner
+banner:
+  title : "I’m <br> Niccolò Salvini<br> Data Scientist"
+
+# about
+about:
+  enable : true
+  content : "I am a Data Science and Business Analytics student with a quantitative mindset supported by a flexible economic approach and IT skills. Currently I am looking for an internship to apply my competences"
+  button:
+    enable : true
+    label : "Wanna know more?"
+    URL : "about"
+
+# skill
+skill:
+  enable : true
+  title : "Programming Languages"
+  item:
+    - title : "R"
+      progress : "90%"
+      color : "#75aadb"
+      
+    - title : "Python"
+      progress : "60%"
+      color : "#43b02a"
+      
+    - title : "SQL"
+      progress : "70%"
+      color : "#ffbcaa"
+      
+    - title : "GIT"
+      progress : "80%"
+      color : "#de4c36"
+      
+    - title : "CSS"
+      progress : "40%"
+      color : "#fff200"
+      
+    - title : "HTML"
+      progress : "70%"
+      color : "#000000"
+      
+
+# experience
+experience:
+  enable : true
+  title : "Experience"
+  item: 
+    - logo : "images/experience/icon-1.png"
+      title : "Financial Consultant intern"
+      company : "Studio Salvini e associati"
+      duration : "Sept 2017 - Sept 2018"
+      
+    - logo : "images/experience/icon-2.png"
+      title : "Accounting intern"
+      company : "GHD"
+      duration : "Nov 2017 - Mar 2018"
+      
+# education
+education:
+  enable : true
+  title : "Education"
+  item:
+    - title : "MSc: Statistical and Actuarial Sciences  Mj: Data Science and Business Analytics"
+      year : "2018 - 2020"
+      academy : "UCSC Catholic University of Sacred Hearts (Mi)"
+      
+    - title : "Ba Economics and Trade"
+      year : "2013 - 2017"
+      academy : "UNIFI Università di Firenze"
+      
+    - title : "Higher Secondary Certificate (double lang)"
+      year : "2008 - 2013"
+      academy : "Liceo Scientifico Antonio Gramsci"
+
+# service (photos in testimonial)
+service:
+  enable : false
+  title : "This site is fully made in R"
+  item:
+    - title : "Hugo"
+      image : "images/testimonial/assist-1.png"
+      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      highlighted : false
+
+    - title : "Netlify"
+      image : "images/testimonial/assist-2.png"
+      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      highlighted : true
+
+    - title : "Github"
+      image : "images/testimonial/assist-3.png"
+      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      highlighted : false
+
+# portfolio
+portfolio:
+  enable : true
+  title : "Portfolio"
+  item_show : 5
+  # portfolio item comes from 'data/portfolio.yml' item.
+
+# Show-off the R skillz
+testimonial:
+  enable : true
+  title : "This website is fully made in R"
+  item:
+    - name : "Hugo"
+      image : "images/testimonial/assist-1.png"
+      designation : "open-source static site generators"
+      content : "Blistering Speed - Robust Content Management - Markdown Shortcodes - Built-in and Flexible Templates"
+      
+    - name : "Netlify"
+      image : "images/testimonial/assist-2.png"
+      designation : "Hosting, local development to global deployment"
+      content : "Netlify is everything you need to build fast, modern websites: continuous deployment, serverless functions, and so much more."
+      
+    - name : "Github"
+      image : "images/testimonial/assist-3.png"
+      designation : "Online Repo"
+      content : ""
+
+# You can also reach me 
+clients_logo_slider:
+  enable : true
+  item:
+    - logo : "images/clients-logo/client-logo-1.png"
+      URL : "https://web.telegram.org/"
+      
+    - logo : "images/clients-logo/client-logo-2.png"
+      URL : "https://web.telegram.org/"
+      
+    - logo : "images/clients-logo/client-logo-3.png"
+      URL : "https://www.youtube.com/channel/UCapls4apxqsVQsfoO_ZwSlQ?view_as=subscriber"
+      
+    - logo : "images/clients-logo/client-logo-4.png"
+      URL : "https://soundcloud.com/youngfantozzi"
+      
+    - logo : "images/clients-logo/client-logo-5.png"
+      URL : "https://www.depop.com/canottenba"
+      
+    - logo : "images/clients-logo/client-logo-6.png"
+      URL : "https://datanetwork.xyz/user/niccol%c3%b2-salvini/"
+      
+    - logo : "images/clients-logo/client-logo-7.png"
+      URL : "https://stackoverflow.com/users/10666667/niccol%c3%b2-salvini"
+      
+    - logo : "images/clients-logo/client-logo-1.png"
+      URL : "https://web.telegram.org/"
+      
+    - logo : "images/clients-logo/client-logo-2.png"
+      URL : "https://web.telegram.org/"
+      
+    - logo : "images/clients-logo/client-logo-3.png"
+      URL : "https://www.youtube.com/channel/UCapls4apxqsVQsfoO_ZwSlQ?view_as=subscriber"
+      
+    - logo : "images/clients-logo/client-logo-4.png"
+      URL : "https://soundcloud.com/youngfantozzi"
+      
+    - logo : "images/clients-logo/client-logo-5.png"
+      URL : "https://www.depop.com/canottenba"
+      
+    - logo : "images/clients-logo/client-logo-6.png"
+      URL : "https://datanetwork.xyz/user/niccol%c3%b2-salvini/"
+    
+    - logo : "images/clients-logo/client-logo-7.png"
+      URL : "https://stackoverflow.com/users/10666667/niccol%c3%b2-salvini"
+      
+# blog
+blog:
+  enable : true
+  title : "Blogs"
+  # blog post comes from "content/blog" folder
