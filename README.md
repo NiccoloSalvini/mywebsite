@@ -1,90 +1,10 @@
-# Easy Setup (Hugo + Netlify + Forestry)
-Build your website with kross hugo theme by following this easy steps (No Coding Required)
+#  Setup (Hugo + Netlify + Forestry)
 
-<a href="http://bit.ly/meghna-hugo-installation" target="_blank" title="meghna hugo installation" rel="nofollow"><img width="100%" src="https://user-images.githubusercontent.com/37659754/70844354-4028be00-1e6a-11ea-8d84-02e9a25e7db8.png"></a>
-
-In this tutorial we will show you to make your website live without buying any hosting and touching a single line of code. We made this tutorial based on [meghna hugo](https://github.com/themefisher/meghna-hugo) but you can setup everithing like this.
-
-### What you need !!
-
-1. Git acccount (Ex: Github, Gitlab etc ) . In our case we use github.
-2. [Netlify](https://bit.ly/netlify-account) account to host files and add custom domain .
-3. [Forestry](https://bit.ly/forestry-account) account to maintain whole project without code.
-
-
-### Step 1 : Fork or Clone repository
-
-First we will fork this [kross hugo](https://github.com/themefisher/kross-hugo) template.
-
-### Step 2 : Add your repository in Forestry
-
-Go to your [forestry](https://bit.ly/forestry-account)  account and click on `import your site now`. declare your config.toml file [`exampleSite`] and fill up basic settings . Mark everything is done then go to configuration to change the base url . You can put any url but this have to similar as netlify . So for now put a name which you are going to put in netlify as netlify subdomain.
-
-### Step 3 : Setup and host website with Netlify
-
-Here comes the last step . Go to your [netlify](https://bit.ly/netlify-account) account and click add new site . Choose your git repository to import your website in netlify .  And now you can see the forked `kross hugo` theme. select it and follow the steps. Then go to `site settings` for change the site name and put your subdoamin name here what you puted on forestry as base url. save it and go to `deploy` from top menu, Wait a while and click on `site preview` or just simply go to the subdomain you puted as base url. **BOOM! Your site is live.** Now you can go to forestry and add, remove or customize every setting and content.
-
-> If you face any issue regarding the installation feel free to onen [open a new issue](https://github.com/themefisher/kross-hugo/issues)
-
-
-## Table of Contents
-
-- [Demo](#demo)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Reporting Issues](#reporting-issues)
-- [Technical Support or Questions](#technical-support-or-questions)
-- [Licensing](#licensing)
-- [More Hugo Themes](https://themefisher.com/hugo-themes/)
-
-## Demo
-
-| Homepage  | About  | Blog  | Portfolio  | Contact  |
-|---|---|---|---|---|
-| ![Homepage](https://user-images.githubusercontent.com/37659754/58154295-1a9c5300-7c93-11e9-992c-ad8d2ff8d99f.png) | ![About](https://user-images.githubusercontent.com/37659754/58154317-28ea6f00-7c93-11e9-914b-b7e5f1cdab0e.png) | ![Blog](https://user-images.githubusercontent.com/37659754/58154339-369ff480-7c93-11e9-9568-53b7ebdc6b2d.png) | ![portfolio](https://user-images.githubusercontent.com/37659754/58154368-491a2e00-7c93-11e9-8900-f5a6abe0a61d.png) | ![contact](https://user-images.githubusercontent.com/37659754/58154403-57684a00-7c93-11e9-9cea-ea28253a6f6a.png) |
-
-**The images are only for demonstration purpose, Please don't use those images.**
-
-[Live Preview](http://demo.themefisher.com/kross-hugo/).
-
-## Quick Start
-Quick start options:
-
-- Clone the repo: `git clone https://github.com/themefisher/kross-hugo.git`.
-- [Download from Github](https://github.com/themefisher/kross-hugo/archive/master.zip).
-- [Download from themefisher website](https://themefisher.com/products/kross-creative-portfolio-template).
-
-## Installation
-At the top we have shown an easy hugo installation. but still if you think you want to go with the traditional way then use the following commands:
-
-```
-$ git clone git@github.com:themefisher/kross-hugo.git
-$ cd kross-hugo/exampleSite/
-$ hugo server --themesDir ../..
-```
-
-
-## Reporting Issues
-
-We use GitHub Issues as the official bug tracker for the **Kross Theme**. Please Search [existing issues](https://github.com/themefisher/kross-hugo/issues). It’s possible someone has already reported the same problem.
-If your problem or idea is not addressed yet, [open a new issue](https://github.com/themefisher/kross-hugo/issues/new)
-
-## Technical Support or Questions
-
-If you have questions or need help integrating the product please [contact us](mailto:themefisher@gmail.com) instead of opening an issue.
-
-## Licensing
-
-- Copyright 2019 Themefisher (https://themefisher.com/)
-- Licensed under MIT (https://github.com/themefisher/kross-hugo/blob/master/LICENSE)
-
-
-## Premium Themes
-
-| [![Mega-Bundle-HUGO](https://gethugothemes.com/wp-content/uploads/edd/2019/09/Mega-Bundle-HUGO.png)](https://themefisher.com/products/hugo-mega-bundle/) | [![Phantop](https://gethugothemes.com/wp-content/uploads/edd/2019/06/Phantom.jpg)](https://gethugothemes.com/products/phantom-hugo-theme/) | [![redlab](https://gethugothemes.com/wp-content/uploads/edd/2019/09/redlab-hugo-thumbnail.jpg)](https://gethugothemes.com/products/redlab-hugo/) |
-|:---:|:---:|:---:|
-| **Hugo Mega Bundle**  | **Phantom**  | **Red Lab**  |
-| [![northendlab](https://gethugothemes.com/wp-content/uploads/2019/11/Blogplate-Blog-Template.png)](https://gethugothemes.com/products/northendlab/) | [![Influencer](https://gethugothemes.com/wp-content/uploads/2019/11/Influencer.png)](https://gethugothemes.com/products/influencer-hugo/) | [![Vex](https://gethugothemes.com/wp-content/uploads/edd/2019/07/Vex.jpg)](https://gethugothemes.com/products/vex-hugo-theme/) |
-| **Northendlab** | **Influencer** | **Vex** |
-| [![Timer](https://gethugothemes.com/wp-content/uploads/edd/2019/07/Timer.jpg)](https://gethugothemes.com/products/timer-hugo-theme/) | [![Parsa](https://gethugothemes.com/wp-content/uploads/edd/2019/07/parsa-768x576.jpg)](https://gethugothemes.com/products/parsa-hugo-theme/) | [![all](https://gethugothemes.com/wp-content/uploads/2019/12/get-more-hugo-themes.png)](https://gethugothemes.com/shop/) |
-| **Timer** | **Parsa** | **More Hugo Themes** |
+![hugo](https://i.pinimg.com/originals/70/01/06/7001062ef4a267b6c4ce3d6497495bea.png)
+![netlify](https://temudokter.netlify.com/static/media/netlify.92b6c228.png)
+![forestry](data:image/png;base64,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)
+  
+This is a personal customization of an existing theme from [Themefisher](https://github.com/themefisher/kross-hugo)
+- The site is fully made in R and has a [**Hugo**](https://gohugo.io/) static _HTML_ file generator
+- I deployed it with [Netlify](https://www.netlify.com/) importing the repo from the [Github](https://github.com/NiccoloSalvini) "mywebsite"
+- Then in order to make it easy to edit and upload contents I exported the site into a flexible CMS [Forestr.io](https://forestry.io/)
