@@ -1,5 +1,5 @@
 # default configuration
-baseURL = "https://wizardly-lovelace-fa45f1.netlify.com/"
+baseURL = "https://niccolosalvini.netlify.com/"
 languageCode = "en-us"
 summaryLength = "10"
 theme = "kross-hugo"
