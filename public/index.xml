@@ -6,10 +6,28 @@
     <description>Recent content on Niccolo Salvini website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jan 2020 21:18:14 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/blog/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Wed, 15 Jan 2020 21:18:14 +0000</pubDate>
+      
+      <guid>/blog/2015-07-23-r-rmarkdown/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.</description>
+    </item>
+    
+    <item>
+      <title>I fascisti della Musica</title>
+      <link>/blog/amazon-increase-income.3/</link>
+      <pubDate>Mon, 13 Jan 2020 19:14:34 +0000</pubDate>
+      
+      <guid>/blog/amazon-increase-income.3/</guid>
+      <description>Bizzarro. Durante una pacata e ridente cena a tavola salta fuori il tema: &amp;lsquo;musica che ascolti&amp;rsquo;.</description>
+    </item>
     
     <item>
       <title>Athazagorafobic</title>
@@ -17,7 +35,7 @@
       <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/blog/amazon-increase-income.2/</guid>
-      <description>Footprint One of the main reason for me to have this is leaving a permanent footprint of my existence.</description>
+      <description>Digital Footprint? One of the main reason for me to have this is leaving a permanent footprint of my existence.</description>
     </item>
     
     <item>
@@ -27,15 +45,6 @@
       
       <guid>/blog/first-commit/</guid>
       <description>Flusso di Coscienza alla Joyce Questo primo post lo scrivo completamente in italiano, la mia madrelingua.</description>
-    </item>
-    
-    <item>
-      <title>Amazon increase income 1.5 Million</title>
-      <link>/blog/amazon-increase-income.3/</link>
-      <pubDate>Sun, 12 May 2019 12:14:34 +0600</pubDate>
-      
-      <guid>/blog/amazon-increase-income.3/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
@@ -63,15 +72,6 @@
       
       <guid>/blog/amazon-increase-income/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/blog/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/blog/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents.</description>
     </item>
     
   </channel>

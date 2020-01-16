@@ -1,41 +1,28 @@
 # portfolio item
 item:
   - image : "images/portfolio/item-1.png"
-    project_url : "http://examplesite.com"
-    category: "Pensieri"
+    project_url : "https://github.com/NiccoloSalvini/WebScraping-immobiliare.it"
+    category: "Webscraping"
       
   - image : "images/portfolio/item-2.png"
-    project_url : "#"
-    category: "branding"
+    project_url : "https://github.com/NiccoloSalvini/WebScraping-casaclick.it"
+    category: "Webscraping"
       
   - image : "images/portfolio/item-3.png"
-    project_url : "http://examplesite.com"
-    category: "illustration"
+    project_url : "https://github.com/NiccoloSalvini/KiWi-Reeesearch"
+    category: "Online Price Comparator"
       
   - image : "images/portfolio/item-5.png"
-    project_url : "#"
-    category: "design"
-      
-  - image : "images/portfolio/item-8.png"
-    project_url : "http://examplesite.com"
-    category: "illustration"
+    project_url : "https://github.com/NiccoloSalvini/plottando-graphs"
+    category: "Visualization"
       
   - image : "images/portfolio/item-6.png"
-    project_url : "#"
-    category: "design"
+    project_url : "https://github.com/NiccoloSalvini/Text-Mining"
+    category: "Text-Mining"
       
-  - image : "images/portfolio/item-1.png"
-    project_url : "http://examplesite.com"
-    category: "branding"
-      
-  - image : "images/portfolio/item-3.png"
-    project_url : "#"
-    category: "illustration"
-    
-  - image : "images/portfolio/item-7.png"
-    project_url : "http://examplesite.com"
-    category: "branding"
-
+  - image : "images/portfolio/item-4.png"
+    project_url : "https://github.com/NiccoloSalvini/WebScraping-amazon.it"
+    category: "Webscraping"
 
 # client logo slider
 clients_logo_slider:
