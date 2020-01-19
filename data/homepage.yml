@@ -118,7 +118,7 @@ testimonial:
     - name : "Github"
       image : "images/testimonial/assist-3.png"
       designation : "Online Repo"
-      content : ""
+      content : "We’re supporting a community where more than 40 million* people learn, share, and work together to build software."
 
 # You can also reach me 
 clients_logo_slider:
