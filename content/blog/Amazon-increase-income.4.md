@@ -1,45 +1,126 @@
 ---
-date: "2019-05-12T12:14:34+06:00"
-description: This is meta description.
+date: 2020-01-22T18:58:00+00:00
+description: a beautiful song
 image: images/blog/post-5.jpg
-title: Amazon increase income 1.5 Million
+title: Lucio Dalla, Come è Profondo il Mare
+
 ---
+Siamo noi, siamo in tanti  
+Ci nascondiamo di notte  
+Per paura degli automobilisti  
+Dei linotipisti  
+Siamo i gatti neri  
+Siamo i pessimisti  
+Siamo i cattivi pensieri  
+E non abbiamo da mangiare  
+Com'è profondo il mare  
+Com'è profondo il mare
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.
+![](https://monomusicmagdotcom.files.wordpress.com/2016/03/lucio-dalla.jpg)
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
+Babbo, che eri un gran cacciatore  
+Di quaglie e di fagiani  
+Caccia via queste mosche  
+Che non mi fanno dormire  
+Che mi fanno arrabbiare  
+Com'è profondo il mare  
+Com'è profondo il mare
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-labore et dolore magnam aliquam quaerat voluptatem.
+È inutile  
+Non c'è più lavoro  
+Non c'è più decoro  
+Dio o chi per lui  
+Sta cercando di dividerci  
+Di farci del male  
+Di farci annegare  
+Com'è profondo il mare  
+Com'è profondo il mare
 
-> Dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+![](http://www.ilgiornale.it/sites/default/files/foto/2016/04/30/1462009295-migranti.jpg)
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-labore et dolore magnam aliquam quaerat voluptatem.
+Con la forza di un ricatto  
+L'uomo diventò qualcuno  
+Resuscitò anche i morti  
+Spalancò prigioni  
+Bloccò sei treni  
+Con relativi vagoni  
+Innalzò per un attimo il povero  
+Ad un ruolo difficile da mantenere  
+Poi lo lasciò cadere  
+A piangere e a urlare  
+Solo in mezzo al mare  
+Com'è profondo il mare
+
+Poi da solo l'urlo  
+Diventò un tamburo  
+E il povero come un lampo  
+Nel cielo sicuro  
+Cominciò una guerra  
+Per conquistare  
+Quello scherzo di terra  
+Che il suo grande cuore  
+Doveva coltivare  
+Com'è profondo il mare  
+Com'è profondo il mare
+
+![](https://www.viverecivitanova.it/upload/2020_01/543861_Cfakepathsardine_ralf.jpg)
+
+Ma la terra  
+Gli fu portata via  
+Compresa quella rimasta addosso  
+Fu scaraventato  
+In un palazzo, in un fosso  
+Non ricordo bene  
+Poi una storia di catene  
+Bastonate  
+E chirurgia sperimentale  
+Com'è profondo il mare  
+Com'è profondo il mare  
+Intanto un mistico  
+Forse un aviatore  
+Inventò la commozione  
+E rimise d'accordo tutti  
+I belli con i brutti  
+Con qualche danno per i brutti  
+Che si videro consegnare  
+Un pezzo di specchio  
+Così da potersi guardare  
+Com'è profondo il mare  
+Com'è profondo il mare
+
+![](https://media-cdn.tripadvisor.com/media/photo-s/04/47/23/4e/ristorante-pizzeria-mane.jpg)
+
+Frattanto i pesci  
+Dai quali discendiamo tutti  
+Assistettero curiosi  
+Al dramma collettivo  
+Di questo mondo  
+Che a loro indubbiamente  
+Doveva sembrar cattivo  
+E cominciarono a pensare  
+Nel loro grande mare  
+Com'è profondo il mare  
+Nel loro grande mare  
+Com'è profondo il mare
+
+È chiaro  
+Che il pensiero dà fastidio  
+Anche se chi pensa  
+È muto come un pesce  
+Anzi un pesce  
+E come pesce è difficile da bloccare  
+Perché lo protegge il mare  
+Com'è profondo il mare
+
+![](https://www.impagine.it/wp-content/uploads/2018/06/COPERTINA-7.jpg)
+
+Certo  
+Chi comanda  
+Non è disposto a fare distinzioni poetiche  
+Il pensiero come l'oceano  
+Non lo puoi bloccare  
+Non lo puoi recintare  
+Così stanno bruciando il mare  
+Così stanno uccidendo il mare  
+Così stanno umiliando il mare  
+Così stanno piegando il mare
