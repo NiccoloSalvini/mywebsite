@@ -2,7 +2,7 @@
     "path" : "C:/Users/nicco/Desktop/Progetti R/website/content/blog",
     "sortOrder" : [
         {
-            "ascending" : false,
+            "ascending" : true,
             "columnIndex" : 2
         }
     ]

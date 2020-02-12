@@ -6,10 +6,19 @@
     <description>Recent content on Niccolo Salvini website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jan 2020 18:58:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2020 12:22:34 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spannungsbogen</title>
+      <link>/blog/amazon-increase-income.5/</link>
+      <pubDate>Wed, 05 Feb 2020 12:22:34 +0000</pubDate>
+      
+      <guid>/blog/amazon-increase-income.5/</guid>
+      <description>Non conosco il tedesco, ma questa parola mi ha subito colpito, la trovo di una profondità così immersiva che tocca il fondo del mio mare di sentimenti.</description>
+    </item>
     
     <item>
       <title>Lucio Dalla, Come è Profondo il Mare</title>
@@ -45,24 +54,6 @@
       
       <guid>/blog/first-commit/</guid>
       <description>Flusso di Coscienza alla Joyce Questo primo post lo scrivo completamente in italiano, la mia madrelingua.</description>
-    </item>
-    
-    <item>
-      <title>Amazon increase income 1.5 Million</title>
-      <link>/blog/amazon-increase-income.5/</link>
-      <pubDate>Sun, 12 May 2019 12:14:34 +0600</pubDate>
-      
-      <guid>/blog/amazon-increase-income.5/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Amazon increase income 1.5 Million</title>
-      <link>/blog/amazon-increase-income/</link>
-      <pubDate>Sun, 12 May 2019 12:14:34 +0600</pubDate>
-      
-      <guid>/blog/amazon-increase-income/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
