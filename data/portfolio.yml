@@ -23,6 +23,15 @@ item:
   - image : "images/portfolio/item-4.png"
     project_url : "https://github.com/NiccoloSalvini/WebScraping-amazon.it"
     category: "Webscraping"
+    
+  - image : "images/portfolio/item-7.png"
+    project_url : "https://github.com/NiccoloSalvini/Early-Warning-Model"
+    category: "Dashboard"
+
+  - image : "images/portfolio/item-8.PNG"
+    project_url : "https://github.com/NiccoloSalvini/ddddashboard"
+    category: "Dashboard"
+    
 
 # client logo slider
 clients_logo_slider:

@@ -63,13 +63,13 @@ education:
   item:
     - title : "MSc: Statistical and Actuarial Sciences  Mj: Data Science and Business Analytics"
       year : "2018 - 2020"
-      academy : "UCSC Catholic University of Sacred Hearts (Mi)"
+      academy : "UCSC Catholic University of Sacred Hearts (MI)"
       
     - title : "Ba Economics and Trade"
       year : "2013 - 2017"
       academy : "UNIFI Università di Firenze"
       
-    - title : "Higher Secondary Certificate (double lang)"
+    - title : "Higher Secondary Certificate (double langs)"
       year : "2008 - 2013"
       academy : "Liceo Scientifico Antonio Gramsci"
 
@@ -97,7 +97,7 @@ service:
 portfolio:
   enable : true
   title : "Portfolio"
-  item_show : 5
+  item_show : 3
   # portfolio item comes from 'data/portfolio.yml' item.
 
 # Show-off the R skillz

@@ -5,15 +5,15 @@ work_process:
   item:
   - title : "Data Visualization"
     icon : "images/icons/plan.png"
-    content : ""
+    content : " 1. Dashboards \n 2. Interactive Plots \n 3. Web Applications "
     
   - title : "Data Mining"
     icon : "images/icons/design.png"
-    content : ""
+    content : "1. ETL \n 2. Feature Engineering \n 3. Model Selection "
     
-  - title : "Data Storing"
+  - title : "Data Management"
     icon : "images/icons/print.png"
-    content : ""
+    content : "1. SQL query \n 2. Abstract Data Type \n 3. Relational Databases "
 
 
 # team
