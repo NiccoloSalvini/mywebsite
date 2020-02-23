@@ -1,7 +1,7 @@
 ---
 date: 2020-02-23 T19:15:14+00:00
 description: This is meta description.
-image: images/blog/post-8.jpg
+image: images/blog/post-7.jpg
 title: "Nujabes - Feather"
 ---
 **click on this _SHIT_ **
