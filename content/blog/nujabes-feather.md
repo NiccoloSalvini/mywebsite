@@ -1,7 +1,6 @@
 +++
 date = 2020-02-23T14:24:00Z
 description = "Chilled Status"
-draft = true
 image = "/uploads/post-8.jpg"
 title = "Nujabes - Feather"
 
