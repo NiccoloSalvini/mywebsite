@@ -1,12 +1,10 @@
 ---
-title: "Nujabes - Feather"
-author: "Niccolò Salvini"
-date: "23/2/2020"
+date: 2020-02-23 T19:15:14+00:00
+description: This is meta description.
 image: images/blog/post-8.jpg
-output: html_document
+title: "Nujabes - Feather"
 ---
-#  Nujabes - Feather
-**click on this**
+**click on this _SHIT_ **
 
 [![](http://img.youtube.com/vi/M-BWXT3UBns/0.jpg)](http://www.youtube.com/watch?v=M-BWXT3UBns "")
 
