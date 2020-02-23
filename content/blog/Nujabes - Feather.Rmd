@@ -2,6 +2,7 @@
 title: "Nujabes - Feather"
 author: "Niccolò Salvini"
 date: "23/2/2020"
+image: images/blog/post-8.jpg
 output: html_document
 ---
 #  Nujabes - Feather
