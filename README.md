@@ -11,6 +11,13 @@ This is my customized theme from [Themefisher](https://github.com/themefisher/kr
 
 
 
-<img src="https://jozef.io/img/r915-01-blogdown-hugo-le.png" alt="hugo" width="200"/>
-<img src="https://temudokter.netlify.com/static/media/netlify.92b6c228.png" alt="netlify" width="200"/>
-<img src="https://infseg.com/img/forestry-io-cms-paginas-estaticas/Forestry_io-Logo-InfSeg.png" alt="forestry" width="200"/>
+
+<p float="left">
+  <img src="https://jozef.io/img/r915-01-blogdown-hugo-le.png" alt="hugo" width="200" width="200" />
+  <img src="https://temudokter.netlify.com/static/media/netlify.92b6c228.png" alt="netlify" width="200" width="200" /> 
+  <img src="https://infseg.com/img/forestry-io-cms-paginas-estaticas/Forestry_io-Logo-InfSeg.png" width="200" />
+</p>
+
+
+
+
