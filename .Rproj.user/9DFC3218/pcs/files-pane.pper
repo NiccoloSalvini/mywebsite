@@ -1,8 +1,8 @@
 {
-    "path" : "C:/Users/nicco/Desktop/Progetti R/website/static/images/about",
+    "path" : "C:/Users/nicco/Desktop/Progetti R/website/data",
     "sortOrder" : [
         {
-            "ascending" : true,
+            "ascending" : false,
             "columnIndex" : 2
         }
     ]
