@@ -31,6 +31,10 @@ item:
   - image : "images/portfolio/item-8.PNG"
     project_url : "https://github.com/NiccoloSalvini/ddddashboard"
     category: "Dashboard"
+
+  - image : "images/portfolio/item-9.PNG"
+    project_url : "https://github.com/NiccoloSalvini/calcola_finanziamento"
+    category: "Dashboard"
     
 
 # client logo slider
