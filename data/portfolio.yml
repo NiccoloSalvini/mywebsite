@@ -35,6 +35,14 @@ item:
   - image : "images/portfolio/item-9.PNG"
     project_url : "https://github.com/NiccoloSalvini/calcola_finanziamento"
     category: "Dashboard"
+  
+  - image : "images/portfolio/item-10.PNG"
+    project_url : "https://github.com/NiccoloSalvini/Churn"
+    category: "School Proj"
+    
+  - image : "images/portfolio/item-11.PNG"
+    project_url : "https://github.com/NiccoloSalvini/XGBOOST_pipeline"
+    category: "School Proj"
     
 
 # client logo slider
