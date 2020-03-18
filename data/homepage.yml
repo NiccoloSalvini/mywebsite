@@ -100,7 +100,7 @@ portfolio:
   item_show : 3
   # portfolio item comes from 'data/portfolio.yml' item.
 
-# Show-off the R skillz
+# FLEX the R skillz
 testimonial:
   enable : true
   title : "This website is fully made in R"
@@ -115,10 +115,10 @@ testimonial:
       designation : "Hosting, local development to global deployment"
       content : "Netlify is everything you need to build fast, modern websites: continuous deployment, serverless functions, and so much more."
       
-    - name : "Github"
+    - name : "Forestry"
       image : "images/testimonial/assist-3.png"
-      designation : "Online Repo"
-      content : "We’re supporting a community where more than 40 million* people learn, share, and work together to build software."
+      designation : "A static CMS that commits"
+      content : "Give your editors the power of Git. Create and edit Markdown-based content with ease."
 
 # You can also reach me 
 clients_logo_slider:
