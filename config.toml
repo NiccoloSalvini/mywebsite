@@ -66,7 +66,7 @@ address = "Piazza Carlo Caneva 4, Milan, Italy"
 author = "Niccolò Salvini"
 description = "This is me"
 # google analitycs
-google_analitycs_id = "Your ID"
+google_analitycs_id = "UA-163575682-1"
 # copyright
 copyright = "Copyrighht &copy; 2020 a theme by [themefisher](https://github.com/themefisher/kross-hugo)"
 
@@ -79,7 +79,7 @@ form_action = "https://formspree.io/xeqedgap" # contact form works with : https:
 # preloader
 [params.preloader]
 enable = true
-preloader = "" # use png, jpg, svg or gif format
+preloader = "https://miro.medium.com/max/611/0*mv8MNRLDNNnt5f72.gif" # use png, jpg, svg or gif format
 
 # social site
 [[params.social]]

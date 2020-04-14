@@ -21,7 +21,7 @@ skill:
       color : "#75aadb"
       
     - title : "Python"
-      progress : "60%"
+      progress : "70%"
       color : "#43b02a"
       
     - title : "SQL"
@@ -29,11 +29,11 @@ skill:
       color : "#ffbcaa"
       
     - title : "GIT"
-      progress : "80%"
+      progress : "60%"
       color : "#de4c36"
       
     - title : "CSS"
-      progress : "40%"
+      progress : "50%"
       color : "#fff200"
       
     - title : "HTML"
@@ -73,7 +73,7 @@ education:
       year : "2008 - 2013"
       academy : "Liceo Scientifico Antonio Gramsci"
 
-# service (photos in testimonial)
+# photos dir in testimonial
 service:
   enable : false
   title : "This site is fully made in R"
@@ -168,6 +168,6 @@ clients_logo_slider:
       
 # blog
 blog:
-  enable : true
+  enable : false
   title : "Blogs"
   # blog post comes from "content/blog" folder
