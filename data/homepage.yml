@@ -8,7 +8,7 @@ about:
   content : "I am a Data Science and Business Analytics student with a quantitative mindset supported by a flexible economic approach and IT skills. Currently I am looking for an internship to apply my competences"
   button:
     enable : true
-    label : "Wanna know more?"
+    label : "Wanna know moreee?"
     URL : "about"
 
 # skill
@@ -26,7 +26,7 @@ skill:
       
     - title : "SQL"
       progress : "70%"
-      color : "#ffbcaa"
+      color : "#FC00FF"
       
     - title : "GIT"
       progress : "60%"
@@ -34,11 +34,12 @@ skill:
       
     - title : "CSS"
       progress : "50%"
-      color : "#fff200"
+      color : "#0007FF"
       
     - title : "HTML"
       progress : "70%"
       color : "#000000"
+    
       
 
 # experience
