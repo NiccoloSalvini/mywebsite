@@ -16,7 +16,7 @@ He has to switch from tab to tab to change values and to evaluate if the financi
 <html>
 <head><title>Shiny App Iframe</title></head>
 <body>
-<iframe id="example1" src="https://gallery.shinyapps.io/goog-trend-index/" style="border: none; width: 100%; height: 850px" frameborder="0"></iframe>
+<iframe id="example1" src="https://niccolosalvini.shinyapps.io/calcola_finanziamento/" style="border: none; width: 100%; height: 850px" frameborder="0"></iframe>
 </body>
 </html>
 ```{r cars}
