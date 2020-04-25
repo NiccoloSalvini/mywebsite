@@ -34,7 +34,7 @@ functionalities and the idea behind building the _recipes_. Those are all the no
 
 |  prepare() |  prep()|
 
-|  newdata|  new_data|  
+|  newdata|  new_data|
 
 |  all_predictors()|  everything()|
 
@@ -50,7 +50,7 @@ you should not _undish_ the dinner but simply go get the grocery at the
 
 store and add the extra flavor. Still the recipe is consistent you are
 
-not messing the 'dressing'. 
+not messing the 'dressing'.
 
 From my perspective this is mainly good for at **least 4 reasons**:
 
@@ -58,13 +58,9 @@ From my perspective this is mainly good for at **least 4 reasons**:
 
 2\.  it keeps all the stuff well ordered
 
-3\.  it gives a solution together with the `parnsip` to gather all the
+3\.  it gives a solution together with the `parnsip` to gather all the data
 
-    different models into one common framework
-
-4\.  once you have done it for the first time it is just a matter of copy
-
-    and past
+4\.  once you have done it for the first time it is just a matter of copyand paste
 
     {r, warning=FALSE, include=FALSE}
     
@@ -72,9 +68,8 @@ From my perspective this is mainly good for at **least 4 reasons**:
     library(tidyverse) 
     library(caret)
     library(dimRed)
-    
 
-##  R Model Formulas
+## R Model Formulas
 
 ***
 
@@ -86,7 +81,6 @@ From my perspective this is mainly good for at **least 4 reasons**:
       step_log(price) %>% 
       step_dummy(type)
     rec
-    
 
 Once you have initialized the `recipe` you can start adding steps to the
 
@@ -106,7 +100,7 @@ preprocess operations you want to have to you data, but again we are still not d
 
 specifying all the operations that we want to perform. The recipe to serve our best dish.
 
-##  `prep` preparation step
+## `prep` preparation step
 
 ***
 
@@ -126,7 +120,7 @@ dataset you give and when you estimate it keeps that modified version
 
 on the training so that you do not have to do it many more times.
 
-##  `bake()` baking step
+## `bake()` baking step
 
 ***
 
@@ -134,9 +128,9 @@ Now going on with the analogy you cook the `recipe`, so we take the \`recipe\` o
 
 that we created and then apply this `recipe` to the dataset that we have.
 
-It is pretty like an apply method. The reason why you can specify the dataset can be found in the fourth point of  **least 4 reasons** I enounced before. Once you have specified the \`recipe\` you can
+It is pretty like an apply method. The reason why you can specify the dataset can be found in the fourth point of  **least 4 reasons** I enounced before. Once you have specified the `recipe` you can
 
-cook through the steps with any ingredients. Say you are cooking chicken Masala, you know the recipe because you love Indian food. Once you have to make lamb Masala, assuming that there is no Indian chef hearing, it is just a matter of cooking meat time. 
+cook through the steps with any ingredients. Say you are cooking chicken Masala, you know the recipe because you love Indian food. Once you have to make lamb Masala, assuming that there is no Indian chef hearing, it is just a matter of cooking meat time.
 
     {r}  
     design_mat = bake(rec_trained, new_data = Sacramento)
@@ -147,7 +141,7 @@ For the moment we still didn't encode any
 
 variables, didn't do any PCA (any sort of selection features) nor
 
-discretized predictors with dynamic bins. 
+discretized predictors with dynamic bins.
 
 What the `dplyr` syntax actually
 
@@ -155,7 +149,6 @@ allow us to do is to apply the step to a set of columns that have in common a fe
 
     {r, echo=FALSE, error=FALSE, eval=FALSE}
     step_spatialsign(matches(“PC[1-9]”), all_numeric(),-all_outcomes())
-    
 
 One other interesting feature is that you can decide before actually
 
@@ -175,29 +168,22 @@ See below:
 
 ***
 
-\`\`\`{r}
-
-standardized = rec_trained %>% 
-
-  step_center(all_numeric()) %>% 
-
-  step_scale(all_numeric()) %>% 
-
-  step_pca(all_numeric())
-
-standardized = prep(standardized)
-
-standardized
-
-\`\`\`
+    {r}
+    standardized = rec_trained %>%
+    step_center(all_numeric()) %>%
+    step_scale(all_numeric()) %>%
+    step_pca(all_numeric())
+    standardized = prep(standardized)
+    standardized
+    
 
 You can just keep adding steps to it. Here you added to the  previous \`recipe\` that, as we know,
 
-logged the price and encode the dummy variable. 
+logged the price and encode the dummy variable.
 
 It actually does not make sense this tranformation for this variables but it is just to
 
-give a taste of what are the potentialities. If you didn't set the *retain = T* then when you
+give a taste of what are the potentialities. If you didn't set the _retain = T_ then when you
 
 are refitting in the standardized you are going to loose work, so make
 
@@ -259,7 +245,6 @@ to make predictions of the segmentation quality based on these features.
       filter(Case =="Test") %>%
     
       select(-Case, -Cell)
-    
 
 ## A Simple Recipe
 
@@ -273,7 +258,6 @@ to make predictions of the segmentation quality based on these features.
       
     basic <- prep(basic, training = seg_train, verbose = FALSE, retain = TRUE)
     basic
-    
 
 ## Principal Component Analysis
 
@@ -281,7 +265,6 @@ to make predictions of the segmentation quality based on these features.
       step_pca(all_predictors(),threshold =.9)
     
     summary(pca)
-    
 
 ## Principal Component Analysis
 
@@ -307,7 +290,6 @@ to make predictions of the segmentation quality based on these features.
       xlim(rngs) + 
       ylim(rngs) + 
       theme(legend.position = "top")
-    
 
 ## Kernel Principal Component Analysis
 
@@ -317,7 +299,6 @@ to make predictions of the segmentation quality based on these features.
     
     kern_pca<- prep(kern_pca)
     kern_pca <- bake(kern_pca, new_data = seg_test, everything())
-    
 
 ## Kernel Principal Component Analysis
 
@@ -327,7 +308,6 @@ to make predictions of the segmentation quality based on these features.
            aes(x = kPC1, y = kPC2, color = Class)) +
            geom_point(alpha = .4) +
            xlim(rngs) + ylim(rngs) + theme(legend.position = "top")
-    
 
 ## Distance to Each Class Centroid
 
@@ -341,7 +321,6 @@ to make predictions of the segmentation quality based on these features.
     dist_to_classes
     
     ```
-    
 
 ## Distance to Each Class
 
