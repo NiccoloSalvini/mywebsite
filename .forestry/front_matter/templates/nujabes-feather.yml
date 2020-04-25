@@ -16,3 +16,4 @@ fields:
   label: title
 pages:
 - content/blog/nujabes-feather.md
+- content/blog/recipes.md
