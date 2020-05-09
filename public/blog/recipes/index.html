@@ -110,333 +110,240 @@
       <div class="row">
         <div class="col-lg-12">
           <h3 class="font-tertiary mb-5">recipes</h3>
-          <p class="font-secondary">Published on Jan 01, 0001 by <span class="text-primary">Niccolò Salvini</span></p>
+          <p class="font-secondary">Published on Apr 25, 2020 by <span class="text-primary">Niccolò Salvini</span></p>
           <div class="content">
-            <img src="/images/blog/post-12.png" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
-            
-
-
-<p><a href="http://cran.r-project.org/web/packages/recipes"><img src="http://www.r-pkg.org/badges/version/recipes" alt="CRAN_Status_Badge" /></a></p>
-<p><img src="img/logo.png" alt="drawing" width="139"/></p>
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
-<p>This tutorial comes from the
-<a href="https://rstudio.com/resources/webinars/creating-and-preprocessing-a-design-matrix-with-recipes/">RStudio 2017</a>
-conference where the author of the package <a href="https://resources.rstudio.com/authors/max-kuhn">MaxKuhn</a> explains the
-functionalities and the idea behind building the <em>recipes</em>. Those are all the notes taken during the online lecture.</p>
+            <img src="/uploads/post-12.png" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+            <h1 id="recipes">recipes</h1>
+<hr>
+<p>[![CRAN_Status_Badge](<a href="http://www.r-pkg.org/badges/version/recipes" title="http://www.r-pkg.org/badges/version/recipes">http://www.r-pkg.org/badges/version/recipes</a>)](<a href="http://cran.r-project.org/web/packages/recipes" title="http://cran.r-project.org/web/packages/recipes">http://cran.r-project.org/web/packages/recipes</a>)</p>
+<!-- raw HTML omitted -->
+<h2 id="introduction">introduction</h2>
+<hr>
+<p>This tutorial comes from the</p>
+<p>[RStudio 2017](<a href="https://rstudio.com/resources/webinars/creating-and-preprocessing-a-design-matrix-with-recipes/" title="https://rstudio.com/resources/webinars/creating-and-preprocessing-a-design-matrix-with-recipes/">https://rstudio.com/resources/webinars/creating-and-preprocessing-a-design-matrix-with-recipes/</a>)</p>
+<p>conference where the author of the package [MaxKuhn](<a href="https://resources.rstudio.com/authors/max-kuhn" title="https://resources.rstudio.com/authors/max-kuhn">https://resources.rstudio.com/authors/max-kuhn</a>) explains the</p>
+<p>functionalities and the idea behind building the <em>recipes</em>. Those are all the notes taken during the online lecture.</p>
 <p><strong>warings</strong>:: Something can have changed from the original 2017 presentation. I updated the syntax so that it matches the latest version of the package and it is reusable. Below you find the major improvements wrt what we are doing here.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="right"><strong>First</strong></th>
-<th align="right"><strong>Before</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right"><code>prepare()</code></td>
-<td align="right"><code>prep()</code></td>
-</tr>
-<tr class="even">
-<td align="right">newdata</td>
-<td align="right">new_data</td>
-</tr>
-<tr class="odd">
-<td align="right"><code>all_predictors()</code></td>
-<td align="right"><code>everything()</code></td>
-</tr>
-</tbody>
-</table>
-<p>The idea is pretty simple: once you have to cook a dish you have to know
-the <em>recipe</em>. Once you know the <em>recipe</em> which is basically a sequence of
-simple steps, you can then perform the dish and serve it. If at some
-point you understand that the dish is missing something, say some spicy,
-you should not <em>undish</em> the dinner but simply go get the grocery at the
-store and add the extraflavour. Still the recipe is consisten you are
-not messing the ‘dressing’.
-From my perspective this is mainly good for at <strong>least 4 reasons</strong>:</p>
-<ol style="list-style-type: decimal">
-<li>it follows good statistical practice</li>
-<li>it keeps all the stuff well ordered</li>
-<li>it gives a solution toghether with the <code>parnsip</code> to gather all the
-different models into one common framework</li>
-<li>once you have done it for the first time it is just a matter of copy
-and paste</li>
-</ol>
-</div>
-<div id="r-model-formulas" class="section level2">
-<h2>R Model Formulas</h2>
-<pre class="r"><code>data(Sacramento)
+<p>|  First|  <strong>Before</strong>|</p>
+<p>|&ndash;:|&ndash;:|</p>
+<p>|  prepare() |  prep()|</p>
+<p>|  newdata|  new_data|</p>
+<p>|  all_predictors()|  everything()|</p>
+<p>The idea is pretty simple: once you have to cook a dish you have to know</p>
+<p>the <em>recipe.</em> Once you know the <em>recipe</em> which is basically a sequence of</p>
+<p>simple steps, you can then perform the dish and serve it. If at some</p>
+<p>point you understand that the dish is missing something, say some spicy,</p>
+<p>you should not <em>undish</em> the dinner but simply go get the grocery at the</p>
+<p>store and add the extra flavor. Still the recipe is consistent you are</p>
+<p>not messing the &lsquo;dressing&rsquo;.</p>
+<p>From my perspective this is mainly good for at <strong>least 4 reasons</strong>:</p>
+<p>1.  it follows good statistical practice</p>
+<p>2.  it keeps all the stuff well ordered</p>
+<p>3.  it gives a solution together with the <code>parnsip</code> to gather all the data</p>
+<p>4.  once you have done it for the first time it is just a matter of copyand paste</p>
+<pre><code>{r, warning=FALSE, include=FALSE}
 
+library(recipes) 
+library(tidyverse) 
+library(caret)
+library(dimRed)
+</code></pre>
+<h2 id="r-model-formulas">R Model Formulas</h2>
+<hr>
+<pre><code>{r}
+data(Sacramento)
 rec  = recipe(price ~ type + sqft, data = Sacramento)
+
 rec = rec %&gt;%  
   step_log(price) %&gt;% 
   step_dummy(type)
-rec</code></pre>
-<pre><code>## Data Recipe
-## 
-## Inputs:
-## 
-##       role #variables
-##    outcome          1
-##  predictor          2
-## 
-## Operations:
-## 
-## Log transformation on price
-## Dummy variables from type</code></pre>
-<p>Once you have initialized the <code>recipe</code> you can start adding steps to the
-<code>recipe</code>: so if you want to take the original <code>recipe</code> and add a step said
-to be <code>step_log()</code> and you simply put the variabile inside the
-parentheses and that modifies the <code>recipe</code> including the step done (this
-as it is said will add the logarithm to the variable price). Then say
-that you want to dummyfy the varible ‘type’. You pipe-operate all the
-previous recipe adding one more step. This decribes the
-preprocess operations you want to have to you data, but again we are still not doing any computation, we are
-specifying all the operations that we want to perform. The recipe to serve our best dish.</p>
-</div>
-<div id="prep-preparation-step" class="section level2">
-<h2><code>prep()</code> preparation step</h2>
-<pre class="r"><code>rec_trained = prep(rec, training = Sacramento, retain = T)
-rec_trained</code></pre>
-<pre><code>## Data Recipe
-## 
-## Inputs:
-## 
-##       role #variables
-##    outcome          1
-##  predictor          2
-## 
-## Training data contained 932 data points and no missing data.
-## 
-## Operations:
-## 
-## Log transformation on price [trained]
-## Dummy variables from type [trained]</code></pre>
-<p>In the chunk above you are <strong>preparing</strong> the <code>recipe</code>.
-This preparing can be see as the training/fitting the preprocess steps,
-but actually you are not still from a computational pov doing it. What it does is printing the steps, it helps
-you to keep track of what you are doing. the <em>retain = T</em> take the
-dataset you give and when you estimate it keeps that modified version
-on the training so that you do not have to do it many more times.</p>
-</div>
-<div id="bake-baking-step" class="section level2">
-<h2><code>bake()</code> baking step</h2>
-<p>Now going on with the analogy you cook the <code>recipe</code>, so we take the <code>recipe</code> object
-that we created and then apply this <code>recipe</code> to the dataset that we have.
-It is pretty like an apply method. The reason why you can specify the dataset can be found in the fourth point of <strong>least 4 reasons</strong> I enounced before. Once you have specified the <code>recipe</code> you can
-cook through the steps with any ingredients. Say you are cooking chicken masala, you know the recipe beacuse you love indian food. Once you have to make lamb masala, assuming that there is no indian chef hearing, it is just a matter of coocking meat time.</p>
-<pre class="r"><code>design_mat = bake(rec_trained, new_data = Sacramento)</code></pre>
-<p>here you define the design matrix, so the set of all the predictors, but we havent finished yet.
-For the moment we still didn’t encode any
-variables, didn’t do any PCA (any sort of selection features) nor
-discretized predictors with dynamic bins.
-What the <code>dplyr</code> syntax actually
-allow us to do is to apply the step to a set of columns that have in common a feature, the fact that they are numeric.</p>
-<p>One other interesting feature is that you can decide before actually
-performing operations how many PCAs you want, you might want to do
-operation that actually are not still performed. really really rich set
-of steps.</p>
-<p>Another cool thing about the recipe is that is <em>cumulative</em> in the sense that you can
-split the preprocess into parts so that you can be very precise and narrow many different preprocess pipelines.
-Seebelow:</p>
-</div>
-<div id="second-step-preprocess" class="section level2">
-<h2>second step preprocess</h2>
-<pre class="r"><code>standardized = rec_trained %&gt;% 
-  step_center(all_numeric()) %&gt;% 
-  step_scale(all_numeric()) %&gt;% 
-  step_pca(all_numeric())
-
+rec
+</code></pre>
+<p>Once you have initialized the <code>recipe</code> you can start adding steps to the</p>
+<p><code>recipe</code>: so if you want to take the original <code>recipe</code> and add a step said</p>
+<p>to be <code>step_log()</code>and you simply put the variabile inside the</p>
+<p>parentheses and that modifies the <code>recipe</code> including the step done (this</p>
+<p>as it is said will add the logarithm to the variable price). Then say</p>
+<p>that you want to dummy the varible <code>type</code>. You pipe-operate all the</p>
+<p>previous recipe adding one more step.  This describes the</p>
+<p>preprocess operations you want to have to you data, but again we are still not doing any computation, we are</p>
+<p>specifying all the operations that we want to perform. The recipe to serve our best dish.</p>
+<h2 id="prep-preparation-step"><code>prep</code> preparation step</h2>
+<hr>
+<pre><code>{r}  
+rec_trained = prep(rec, training = Sacramento, retain = T)
+rec_trained
+</code></pre>
+<p>In the chunk above you are <strong>preparing</strong> the <code>recipe</code>.</p>
+<p>This preparing can be see as the training/fitting the preprocess steps,</p>
+<p>but actually you are not still from a computational pov doing it. What it does is printing the steps, it helps</p>
+<p>you to keep track of what you are doing. the <em>retain = T</em> take the</p>
+<p>dataset you give and when you estimate it keeps that modified version</p>
+<p>on the training so that you do not have to do it many more times.</p>
+<h2 id="bake-baking-step"><code>bake()</code> baking step</h2>
+<hr>
+<p>Now going on with the analogy you cook the <code>recipe</code>, so we take the `recipe` object</p>
+<p>that we created and then apply this <code>recipe</code> to the dataset that we have.</p>
+<p>It is pretty like an apply method. The reason why you can specify the dataset can be found in the fourth point of  <strong>least 4 reasons</strong> I enounced before. Once you have specified the <code>recipe</code> you can</p>
+<p>cook through the steps with any ingredients. Say you are cooking chicken Masala, you know the recipe because you love Indian food. Once you have to make lamb Masala, assuming that there is no Indian chef hearing, it is just a matter of cooking meat time.</p>
+<pre><code>{r}  
+design_mat = bake(rec_trained, new_data = Sacramento)
+</code></pre>
+<p>here you define the design matrix, so the set of all the predictors, but we haven't finished yet.</p>
+<p>For the moment we still didn't encode any</p>
+<p>variables, didn't do any PCA (any sort of selection features) nor</p>
+<p>discretized predictors with dynamic bins.</p>
+<p>What the <code>dplyr</code> syntax actually</p>
+<p>allow us to do is to apply the step to a set of columns that have in common a feature, the fact that they are numeric.</p>
+<pre><code>{r, echo=FALSE, error=FALSE, eval=FALSE}
+step_spatialsign(matches(“PC[1-9]”), all_numeric(),-all_outcomes())
+</code></pre>
+<p>One other interesting feature is that you can decide before actually</p>
+<p>performing operations how many PCAs you want, you might want to do</p>
+<p>operation that actually are not still performed. really really rich set</p>
+<p>of steps.</p>
+<p>Another cool thing about the recipe is that is <em>cumulative</em> in the sense that you can</p>
+<p>split the preprocess into parts so that you can be very precise and narrow many different preprocess pipelines.</p>
+<p>See below:</p>
+<h2 id="second-step-preprocess">second step preprocess</h2>
+<hr>
+<pre><code>{r}
+standardized = rec_trained %&gt;%
+step_center(all_numeric()) %&gt;%
+step_scale(all_numeric()) %&gt;%
+step_pca(all_numeric())
 standardized = prep(standardized)
-standardized</code></pre>
-<pre><code>## Data Recipe
-## 
-## Inputs:
-## 
-##       role #variables
-##    outcome          1
-##  predictor          2
-## 
-## Training data contained 932 data points and no missing data.
-## 
-## Operations:
-## 
-## Log transformation on price [trained]
-## Dummy variables from type [trained]
-## Centering for sqft, price, ... [trained]
-## Scaling for sqft, price, ... [trained]
-## PCA extraction with sqft, price, type_Multi_Family, type_Residential [trained]</code></pre>
-<p>You can just keep adding steps to it. Here you added to the previous <code>recipe</code> that, as we know,
-logged the price and encode the dummy variable.
-It actually does not make sense this tranformation for this variables but it is just to
-give a taste of what are the potentialities. If you didn’t set the <em>retain = T</em> then when you
-are refitting in the standardized you are going to loose work, so make
-sure you do not forget it. Those below are some of the steps you can
-perform, this presentation come from <strong>2017</strong> so the mantainers will for
-sure have refined it.</p>
-<div class="figure">
-<img src="img/img1.PNG" alt="img1" />
-<p class="caption">img1</p>
-</div>
-<p>econding: dummy variables, discretization, date feature: you can model
-holidays (purrr it before) imputation: all the main imputation</p>
-<p>Once you have all set up you can call the fucntion that wraps all
-toghether like in the python framework:</p>
-<pre class="r"><code>lin_reg.recipe = function(rec,data) {
+standardized
+</code></pre>
+<p>You can just keep adding steps to it. Here you added to the  previous `recipe` that, as we know,</p>
+<p>logged the price and encode the dummy variable.</p>
+<p>It actually does not make sense this tranformation for this variables but it is just to</p>
+<p>give a taste of what are the potentialities. If you didn't set the <em>retain = T</em> then when you</p>
+<p>are refitting in the standardized you are going to loose work, so make</p>
+<p>sure you do not forget it. Those below are some of the steps you can</p>
+<p>perform, this presentation come from <strong>2017</strong> so the mantainers will for</p>
+<p>sure have refined it.</p>
+<p>![img1](img/img1.PNG)</p>
+<p>econding: dummy variables, discretization, date feature: you can model</p>
+<p>holidays (purrr it before) imputation: all the main imputation</p>
+<p>Once you have all set up you can call the fucntion that wraps all</p>
+<p>toghether like in the python framework:</p>
+<pre><code>{r}
+lin_reg.recipe = function(rec,data) {
+
   trained = prep(rec, training = data)
+
   lm.fit(x= bake(trained, new_data = data, all_predictors()),
+
          y =bake(trained, new_data = data, all_outcomes()))
-  
-}</code></pre>
-</div>
-<div id="a-practical-example" class="section level2">
-<h2>A Practical Example</h2>
-<p><a href="http://appliedpredictivemodeling.com">Kuhn and Johnson</a> (2013) analyze
-a data set where thousands of cells are determined to be well-segmented
-(WS) or poorly segmented (PS) based on 58 image features. We would like
-to make predictions of the segmentation quality based on these features.</p>
-<pre class="r"><code>library(dplyr) 
+
+
+}
+</code></pre>
+<h2 id="a-practical-example">A Practical Example</h2>
+<hr>
+<p>[Kuhn and Johnson](<a href="http://appliedpredictivemodeling.com" title="http://appliedpredictivemodeling.com">http://appliedpredictivemodeling.com</a>) (2013) analyze</p>
+<p>a data set where thousands of cells are determined to be well-segmented</p>
+<p>(WS) or poorly segmented (PS) based on 58 image features. We would like</p>
+<p>to make predictions of the segmentation quality based on these features.</p>
+<pre><code>{r image_load, message=FALSE} 
+library(dplyr) 
+
 library(caret)
 
 data(&quot;segmentationData&quot;)
+
 seg_train &lt;- segmentationData %&gt;%
+
   filter(Case == &quot;Train&quot;) %&gt;%
+
   select(-Case, -Cell) 
+
 seg_test &lt;- segmentationData %&gt;% 
+
   filter(Case ==&quot;Test&quot;) %&gt;%
-  select(-Case, -Cell)</code></pre>
-</div>
-<div id="a-simple-recipe" class="section level2">
-<h2>A Simple Recipe</h2>
-<pre class="r"><code>rec &lt;- recipe(Class ~ ., data = seg_train) 
+
+  select(-Case, -Cell)
+</code></pre>
+<h2 id="a-simple-recipe">A Simple Recipe</h2>
+<pre><code>{r image_rec} 
+rec &lt;- recipe(Class ~ ., data = seg_train) 
+
 basic &lt;- rec %&gt;%# Correct some predictors for skewness
   step_YeoJohnson(all_predictors()) %&gt;% # Standardize the values
   step_center(all_predictors()) %&gt;% 
   step_scale(all_predictors()) #Estimate the transformation and standardization parameters 
+  
 basic &lt;- prep(basic, training = seg_train, verbose = FALSE, retain = TRUE)
-basic</code></pre>
-<pre><code>## Data Recipe
-## 
-## Inputs:
-## 
-##       role #variables
-##    outcome          1
-##  predictor         58
-## 
-## Training data contained 1009 data points and no missing data.
-## 
-## Operations:
-## 
-## Yeo-Johnson transformation on AngleCh1, AreaCh1, ... [trained]
-## Centering for AngleCh1, AreaCh1, AvgIntenCh1, ... [trained]
-## Scaling for AngleCh1, AreaCh1, AvgIntenCh1, ... [trained]</code></pre>
-</div>
-<div id="principal-component-analysis" class="section level2">
-<h2>Principal Component Analysis</h2>
-<pre class="r"><code>pca &lt;- basic %&gt;% 
+basic
+</code></pre>
+<h2 id="principal-component-analysis">Principal Component Analysis</h2>
+<pre><code>{r image_pca}pca &lt;- basic %&gt;% 
   step_pca(all_predictors(),threshold =.9)
-summary(pca)</code></pre>
-<pre><code>## # A tibble: 59 x 4
-##    variable                type    role      source  
-##    &lt;chr&gt;                   &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;   
-##  1 AngleCh1                numeric predictor original
-##  2 AreaCh1                 numeric predictor original
-##  3 AvgIntenCh1             numeric predictor original
-##  4 AvgIntenCh2             numeric predictor original
-##  5 AvgIntenCh3             numeric predictor original
-##  6 AvgIntenCh4             numeric predictor original
-##  7 ConvexHullAreaRatioCh1  numeric predictor original
-##  8 ConvexHullPerimRatioCh1 numeric predictor original
-##  9 DiffIntenDensityCh1     numeric predictor original
-## 10 DiffIntenDensityCh3     numeric predictor original
-## # ... with 49 more rows</code></pre>
-</div>
-<div id="principal-component-analysis-1" class="section level2">
-<h2>Principal Component Analysis</h2>
-<pre class="r"><code>pca &lt;- prep(pca) 
-summary(pca) </code></pre>
-<pre><code>## # A tibble: 16 x 4
-##    variable type    role      source  
-##    &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;   
-##  1 Class    nominal outcome   original
-##  2 PC01     numeric predictor derived 
-##  3 PC02     numeric predictor derived 
-##  4 PC03     numeric predictor derived 
-##  5 PC04     numeric predictor derived 
-##  6 PC05     numeric predictor derived 
-##  7 PC06     numeric predictor derived 
-##  8 PC07     numeric predictor derived 
-##  9 PC08     numeric predictor derived 
-## 10 PC09     numeric predictor derived 
-## 11 PC10     numeric predictor derived 
-## 12 PC11     numeric predictor derived 
-## 13 PC12     numeric predictor derived 
-## 14 PC13     numeric predictor derived 
-## 15 PC14     numeric predictor derived 
-## 16 PC15     numeric predictor derived</code></pre>
-<pre class="r"><code>pca &lt;- bake(pca, new_data = seg_test, everything())</code></pre>
-</div>
-<div id="principal-component-analysis-2" class="section level2">
-<h2>Principal Component Analysis</h2>
-<pre class="r"><code>pca[1:4, 1:8]</code></pre>
-<pre><code>## # A tibble: 4 x 8
-##   Class  PC01  PC02   PC03   PC04  PC05   PC06   PC07
-##   &lt;fct&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-## 1 PS     4.86 -5.85 -0.891 -4.13  1.84  -2.29  -3.88 
-## 2 PS     3.28 -1.51  0.353 -2.24  0.441 -0.911  0.800
-## 3 WS    -7.03 -1.77 -2.42  -0.652 3.22  -0.212  0.118
-## 4 WS    -6.96 -2.08 -2.89  -1.79  3.20  -0.845 -0.204</code></pre>
-<pre class="r"><code>ggplot(pca, aes(x =PC01, y = PC02, color = Class)) + 
-  geom_point(alpha = .4)</code></pre>
-</div>
-<div id="principal-component-analysis-3" class="section level2">
-<h2>Principal Component Analysis</h2>
-<p><img src="/blog/recipes_files/figure-html/image_pca_fig-1.png" width="528" /></p>
-</div>
-<div id="kernel-principal-component-analysis" class="section level2">
-<h2>Kernel Principal Component Analysis</h2>
-<pre class="r"><code>kern_pca &lt;- basic %&gt;% step_kpca(all_predictors(), num = 2,
-                                options = list(kernel = &quot;rbfdot&quot;, kpar = list(sigma = 0.05))) </code></pre>
-<pre><code>## `step_kpca()` is deprecated in favor of either `step_kpca_rbf()` or `step_kpca_poly()`. It will be removed in future versions.</code></pre>
-<pre class="r"><code>kern_pca&lt;- prep(kern_pca)</code></pre>
-<pre><code>## 2020-04-26 00:29:31: Calculating kernel PCA</code></pre>
-<pre><code>## 2020-04-26 00:29:34: Trying to calculate reverse</code></pre>
-<pre><code>## 2020-04-26 00:29:35: DONE</code></pre>
-<pre class="r"><code>kern_pca &lt;- bake(kern_pca, new_data = seg_test, everything())</code></pre>
-</div>
-<div id="kernel-principal-component-analysis-1" class="section level2">
-<h2>Kernel Principal Component Analysis</h2>
-<p><img src="/blog/recipes_files/figure-html/image_kpca_fig-1.png" width="528" /></p>
-</div>
-<div id="distance-to-each-class-centroid" class="section level2">
-<h2>Distance to Each Class Centroid</h2>
-<pre class="r"><code>dist_to_classes &lt;- basic %&gt;%
+
+summary(pca)
+</code></pre>
+<h2 id="principal-component-analysis-1">Principal Component Analysis</h2>
+<pre><code>{r image_pca_train} 
+pca &lt;- prep(pca) 
+summary(pca) 
+pca &lt;- bake(pca, new_data = seg_test, everything())
+</code></pre>
+<h2 id="principal-component-analysis-2">Principal Component Analysis</h2>
+<pre><code>{r image_pca_plot, fig.keep=&quot;none&quot;}
+pca[1:4, 1:8]
+ggplot(pca, aes(x =PC01, y = PC02, color = Class)) + 
+  geom_point(alpha = .4)
+</code></pre>
+<h2 id="principal-component-analysis-3">Principal Component Analysis</h2>
+<pre><code>{r image_pca_fig, echo = FALSE, fig.width = 5.5, fig.height = 5.6} 
+rngs &lt;- extendrange(c(pca$PC01, pca$PC02))
+
+ggplot(pca, aes(x = PC01, y = PC02, color = Class)) +
+  geom_point(alpha = .4) + 
+  xlim(rngs) + 
+  ylim(rngs) + 
+  theme(legend.position = &quot;top&quot;)
+</code></pre>
+<h2 id="kernel-principal-component-analysis">Kernel Principal Component Analysis</h2>
+<pre><code>{r kpca}
+kern_pca &lt;- basic %&gt;% step_kpca(all_predictors(), num = 2,
+                                options = list(kernel = &quot;rbfdot&quot;, kpar = list(sigma = 0.05))) 
+
+kern_pca&lt;- prep(kern_pca)
+kern_pca &lt;- bake(kern_pca, new_data = seg_test, everything())
+</code></pre>
+<h2 id="kernel-principal-component-analysis-1">Kernel Principal Component Analysis</h2>
+<pre><code>{r image_kpca_fig, echo = FALSE, fig.width = 5.5, fig.height = 5.6}
+rngs &lt;- extendrange(c(kern_pca$kPC1, kern_pca$kPC2)) 
+ggplot(kern_pca,
+       aes(x = kPC1, y = kPC2, color = Class)) +
+       geom_point(alpha = .4) +
+       xlim(rngs) + ylim(rngs) + theme(legend.position = &quot;top&quot;)
+</code></pre>
+<h2 id="distance-to-each-class-centroid">Distance to Each Class Centroid</h2>
+<pre><code>{r dists, message = FALSE} 
+dist_to_classes &lt;- basic %&gt;%
 step_classdist(all_predictors(), class = &quot;Class&quot;) %&gt;% # Take log of the
   step_log(starts_with(&quot;classdist&quot;)) 
-
+  
 dist_to_classes&lt;- prep(dist_to_classes, verbose = FALSE) # All variables are retained
 dist_to_classes &lt;-bake(dist_to_classes, new_data = seg_test, matches(&quot;[Cc]lass&quot;))
-dist_to_classes</code></pre>
-<pre><code>## # A tibble: 1,010 x 3
-##    Class classdist_PS classdist_WS
-##    &lt;fct&gt;        &lt;dbl&gt;        &lt;dbl&gt;
-##  1 PS            1.53         1.74
-##  2 PS            1.35         1.46
-##  3 WS            1.71         1.53
-##  4 WS            1.75         1.61
-##  5 PS            1.47         1.65
-##  6 WS            1.48         1.47
-##  7 WS            1.49         1.55
-##  8 WS            1.55         1.40
-##  9 PS            1.54         1.71
-## 10 PS            1.55         1.57
-## # ... with 1,000 more rows</code></pre>
-</div>
-<div id="distance-to-each-class" class="section level2">
-<h2>Distance to Each Class</h2>
-<p><img src="/blog/recipes_files/figure-html/image_dists_fig-1.png" width="528" /></p>
-</div>
+dist_to_classes
+
+```
+</code></pre>
+<h2 id="distance-to-each-class">Distance to Each Class</h2>
+<pre><code>{r image_dists_fig, echo = FALSE, fig.width = 5.5, fig.height = 5.6}
+rngs &lt;- extendrange(c(dist_to_classes$classdist_PS,dist_to_classes$classdist_WS))
+
+ggplot(dist_to_classes, aes(x =classdist_PS, y = classdist_WS, color = Class)) +
+  geom_point(alpha = .4)+
+  xlim(rngs) + 
+  ylim(rngs) + 
+  theme(legend.position = &quot;top&quot;) +
+  xlab(&quot;Distance to PS Centroid (log scale)&quot;) + 
+  ylab(&quot;Distance to WS Centroid (log scale)&quot;)</code></pre>
 
           </div>
         </div>

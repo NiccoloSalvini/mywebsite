@@ -1,23 +1,34 @@
-#  Setup (Hugo + Netlify + Forestry)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d15a0d90-ecf5-4b08-a451-2175034ac135/deploy-status)](https://app.netlify.com/sites/niccolosalvini/deploys)
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-  
-This is my customized theme from [Themefisher](https://github.com/themefisher/kross-hugo)
+# mywebsite <img src="NICCO.png" align="right" height="80" />
 
-1. The site is fully made in R and has a [**Hugo**](https://gohugo.io/) static _HTML_ file generator
-1. I deployed the site through [**Netlify**](https://www.netlify.com/) importing my repo from the [**Github**](https://github.com/NiccoloSalvini) "mywebsite"
-1. Then in order to make it easy to edit and upload contents I exported the site into a flexible _CMS_ [**Forestry.io**](https://forestry.io/)
+*author*: **[Niccolò Salvini](https://niccolosalvini.netlify.app/)**
 
+*date*: 2020-05-09
 
+[![Netlify
+Status](https://api.netlify.com/api/v1/badges/d15a0d90-ecf5-4b08-a451-2175034ac135/deploy-status)](https://app.netlify.com/sites/niccolosalvini/deploys)
 
+<br> <br>
 
-<p float="left">
-  <img src="https://jozef.io/img/r915-01-blogdown-hugo-le.png" alt="hugo" width="200" width="200" />
-  <img src="https://temudokter.netlify.com/static/media/netlify.92b6c228.png" alt="netlify" width="200" width="200" /> 
-  <img src="https://infseg.com/img/forestry-io-cms-paginas-estaticas/Forestry_io-Logo-InfSeg.png" width="200" />
-</p>
+## Deployment happens:
 
+#### *-\>* [here](https://niccolosalvini.netlify.app/) *\<-*
 
+## Description:
 
+This is my customized version of the theme from
+[Themefisher](https://github.com/themefisher/kross-hugo)
 
+I mainly used 4 technologies:
+
+1.  **[Hugo](https://gohugo.io/)** static *HTML* file generator
+2.  **[Netlify](https://www.netlify.com/)** where *deployment* happens
+3.  **[Github](https://github.com/NiccoloSalvini)** the repo
+4.  **[Forestry.io](https://forestry.io/)** the
+*CMS*
+
+## Project Architecture:
+
+<img src="https://jozef.io/img/r915-01-blogdown-hugo-le.png" width="33%" /><img src="https://temudokter.netlify.com/static/media/netlify.92b6c228.png" width="33%" /><img src="https://infseg.com/img/forestry-io-cms-paginas-estaticas/Forestry_io-Logo-InfSeg.png" width="33%" />

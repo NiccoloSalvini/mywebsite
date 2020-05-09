@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>recipes</title>
+      <link>/blog/recipes/</link>
+      <pubDate>Sat, 25 Apr 2020 22:00:00 +0000</pubDate>
+      
+      <guid>/blog/recipes/</guid>
+      <description>recipes  [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/recipes)](http://cran.r-project.org/web/packages/recipes)
+introduction  This tutorial comes from the</description>
+    </item>
+    
+    <item>
       <title>Nujabes - Feather</title>
       <link>/blog/nujabes-feather/</link>
       <pubDate>Sun, 23 Feb 2020 14:24:00 +0000</pubDate>

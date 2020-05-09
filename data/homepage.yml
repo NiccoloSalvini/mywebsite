@@ -47,15 +47,21 @@ experience:
   enable : true
   title : "Experience"
   item: 
-    - logo : "images/experience/icon-1.png"
+    - logo : "images/experience/dnlogo.png"
+      title : "Executive Board Member"
+      company : "Data Network"
+      duration : "Sept 2019 - present"
+        
+    - logo : "images/experience/logoss.png"
       title : "Financial Consultant intern"
       company : "Studio Salvini e associati"
       duration : "Sept 2017 - Sept 2018"
       
-    - logo : "images/experience/icon-2.png"
+    - logo : "images/experience/ghdlogo.png"
       title : "Accounting intern"
       company : "GHD"
       duration : "Nov 2017 - Mar 2018"
+      
       
 # education
 education:
@@ -68,7 +74,7 @@ education:
       
     - title : "Ba Economics and Trade"
       year : "2013 - 2017"
-      academy : "UNIFI Università di Firenze"
+      academy : "UNIFI Università di Firenze (FI)"
       
     - title : "Higher Secondary Certificate (double langs)"
       year : "2008 - 2013"
