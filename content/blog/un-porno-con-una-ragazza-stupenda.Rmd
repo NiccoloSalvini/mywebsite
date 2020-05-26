@@ -2,9 +2,8 @@
 title: "Un Porno con una Ragazza Stupenda"
 output: html_document
 image: "images/blog/images.jpg"
----
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+---
 
 _author_: **[Niccolò Salvini](https://niccolosalvini.netlify.app/)**
 _date_: `r format(Sys.Date(), "%d %B, %Y")`
@@ -22,11 +21,13 @@ _date_: `r format(Sys.Date(), "%d %B, %Y")`
 
 ```{r, echo=FALSE}
 knitr::include_graphics("https://media.giphy.com/media/3PAHags6tl3134gfju/giphy.gif")
+
 ```
 
 
 ```{r, echo=FALSE}
 knitr::include_graphics("https://www.derbyderbyderby.it/wp-content/uploads/sites/64/2020/04/diletta-leotta-giochi-in-piscina-con-il-fidanzato-640x702-274x300.jpg")
+
 ```
 
 
